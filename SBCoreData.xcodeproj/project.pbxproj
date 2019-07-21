@@ -14,6 +14,24 @@
 		F2C50DD822E45F60001F3226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C50DD722E45F60001F3226 /* Assets.xcassets */; };
 		F2C50DDB22E45F60001F3226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2C50DD922E45F60001F3226 /* LaunchScreen.storyboard */; };
 		F2C50DE622E45F61001F3226 /* SBCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DE522E45F61001F3226 /* SBCoreDataTests.swift */; };
+		F2C50DFA22E462D5001F3226 /* SBCoreDataModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF122E462D5001F3226 /* SBCoreDataModelable.swift */; };
+		F2C50DFB22E462D5001F3226 /* SBCoreDataManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF222E462D5001F3226 /* SBCoreDataManagable.swift */; };
+		F2C50DFC22E462D5001F3226 /* SBCoreDataDictionaryToDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF322E462D5001F3226 /* SBCoreDataDictionaryToDataTransformer.swift */; };
+		F2C50DFD22E462D5001F3226 /* SBCoreDataManagedObjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF422E462D5001F3226 /* SBCoreDataManagedObjectStore.swift */; };
+		F2C50DFE22E462D5001F3226 /* SBCoreDataModelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF522E462D5001F3226 /* SBCoreDataModelGenerator.swift */; };
+		F2C50DFF22E462D5001F3226 /* SBCoreDataControllerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF622E462D5001F3226 /* SBCoreDataControllerConstants.swift */; };
+		F2C50E0022E462D5001F3226 /* SBCoreDataManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF722E462D5001F3226 /* SBCoreDataManagedObject.swift */; };
+		F2C50E0122E462D5001F3226 /* SBCoreDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF822E462D5001F3226 /* SBCoreDataAdapter.swift */; };
+		F2C50E0222E462D5001F3226 /* SBCoreDataArrayToDataTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50DF922E462D5001F3226 /* SBCoreDataArrayToDataTransformer.swift */; };
+		F2C50E0522E462E6001F3226 /* UserLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50E0322E462E6001F3226 /* UserLink.swift */; };
+		F2C50E0622E462E6001F3226 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50E0422E462E6001F3226 /* User.swift */; };
+		F2C50E0822E46666001F3226 /* FileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50E0722E46666001F3226 /* FileExtension.swift */; };
+		F2C50E0B22E46757001F3226 /* SBCoreDataControllerUpdateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = F2C50E0922E46756001F3226 /* SBCoreDataControllerUpdateResponse.json */; };
+		F2C50E0C22E46757001F3226 /* SBCoreDataControlerTestResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = F2C50E0A22E46756001F3226 /* SBCoreDataControlerTestResponse.json */; };
+		F2C50E0F22E467AB001F3226 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50E0E22E467AB001F3226 /* UserViewModel.swift */; };
+		F2C50E1322E46A19001F3226 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50E1122E46A19001F3226 /* UserCell.swift */; };
+		F2C50E1422E46A19001F3226 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2C50E1222E46A19001F3226 /* UserCell.xib */; };
+		F2C50E1722E46A30001F3226 /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C50E1622E46A30001F3226 /* UserCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +56,24 @@
 		F2C50DE122E45F61001F3226 /* SBCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SBCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C50DE522E45F61001F3226 /* SBCoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBCoreDataTests.swift; sourceTree = "<group>"; };
 		F2C50DE722E45F61001F3226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2C50DF122E462D5001F3226 /* SBCoreDataModelable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataModelable.swift; sourceTree = "<group>"; };
+		F2C50DF222E462D5001F3226 /* SBCoreDataManagable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataManagable.swift; sourceTree = "<group>"; };
+		F2C50DF322E462D5001F3226 /* SBCoreDataDictionaryToDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataDictionaryToDataTransformer.swift; sourceTree = "<group>"; };
+		F2C50DF422E462D5001F3226 /* SBCoreDataManagedObjectStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataManagedObjectStore.swift; sourceTree = "<group>"; };
+		F2C50DF522E462D5001F3226 /* SBCoreDataModelGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataModelGenerator.swift; sourceTree = "<group>"; };
+		F2C50DF622E462D5001F3226 /* SBCoreDataControllerConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataControllerConstants.swift; sourceTree = "<group>"; };
+		F2C50DF722E462D5001F3226 /* SBCoreDataManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataManagedObject.swift; sourceTree = "<group>"; };
+		F2C50DF822E462D5001F3226 /* SBCoreDataAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataAdapter.swift; sourceTree = "<group>"; };
+		F2C50DF922E462D5001F3226 /* SBCoreDataArrayToDataTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataArrayToDataTransformer.swift; sourceTree = "<group>"; };
+		F2C50E0322E462E6001F3226 /* UserLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLink.swift; sourceTree = "<group>"; };
+		F2C50E0422E462E6001F3226 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F2C50E0722E46666001F3226 /* FileExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileExtension.swift; sourceTree = "<group>"; };
+		F2C50E0922E46756001F3226 /* SBCoreDataControllerUpdateResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SBCoreDataControllerUpdateResponse.json; sourceTree = "<group>"; };
+		F2C50E0A22E46756001F3226 /* SBCoreDataControlerTestResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SBCoreDataControlerTestResponse.json; sourceTree = "<group>"; };
+		F2C50E0E22E467AB001F3226 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		F2C50E1122E46A19001F3226 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		F2C50E1222E46A19001F3226 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		F2C50E1622E46A30001F3226 /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +115,20 @@
 		F2C50DCC22E45F60001F3226 /* SBCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				F2C50E1522E46A1E001F3226 /* ViewModel */,
+				F2C50E1022E469FF001F3226 /* View */,
+				F2C50DF022E462BC001F3226 /* SBCoreDataController */,
+				F2C50E0D22E4675D001F3226 /* Resource */,
 				F2C50DCD22E45F60001F3226 /* AppDelegate.swift */,
 				F2C50DCF22E45F60001F3226 /* ViewController.swift */,
+				F2C50E0722E46666001F3226 /* FileExtension.swift */,
 				F2C50DD122E45F60001F3226 /* Main.storyboard */,
 				F2C50DD722E45F60001F3226 /* Assets.xcassets */,
 				F2C50DD922E45F60001F3226 /* LaunchScreen.storyboard */,
 				F2C50DDC22E45F60001F3226 /* Info.plist */,
 				F2C50DD422E45F60001F3226 /* SBCoreData.xcdatamodeld */,
+				F2C50E0422E462E6001F3226 /* User.swift */,
+				F2C50E0322E462E6001F3226 /* UserLink.swift */,
 			);
 			path = SBCoreData;
 			sourceTree = "<group>";
@@ -97,6 +140,49 @@
 				F2C50DE722E45F61001F3226 /* Info.plist */,
 			);
 			path = SBCoreDataTests;
+			sourceTree = "<group>";
+		};
+		F2C50DF022E462BC001F3226 /* SBCoreDataController */ = {
+			isa = PBXGroup;
+			children = (
+				F2C50DF822E462D5001F3226 /* SBCoreDataAdapter.swift */,
+				F2C50DF922E462D5001F3226 /* SBCoreDataArrayToDataTransformer.swift */,
+				F2C50DF622E462D5001F3226 /* SBCoreDataControllerConstants.swift */,
+				F2C50DF322E462D5001F3226 /* SBCoreDataDictionaryToDataTransformer.swift */,
+				F2C50DF222E462D5001F3226 /* SBCoreDataManagable.swift */,
+				F2C50DF722E462D5001F3226 /* SBCoreDataManagedObject.swift */,
+				F2C50DF422E462D5001F3226 /* SBCoreDataManagedObjectStore.swift */,
+				F2C50DF122E462D5001F3226 /* SBCoreDataModelable.swift */,
+				F2C50DF522E462D5001F3226 /* SBCoreDataModelGenerator.swift */,
+			);
+			path = SBCoreDataController;
+			sourceTree = "<group>";
+		};
+		F2C50E0D22E4675D001F3226 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F2C50E0A22E46756001F3226 /* SBCoreDataControlerTestResponse.json */,
+				F2C50E0922E46756001F3226 /* SBCoreDataControllerUpdateResponse.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F2C50E1022E469FF001F3226 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F2C50E1122E46A19001F3226 /* UserCell.swift */,
+				F2C50E1222E46A19001F3226 /* UserCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F2C50E1522E46A1E001F3226 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F2C50E0E22E467AB001F3226 /* UserViewModel.swift */,
+				F2C50E1622E46A30001F3226 /* UserCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C50DDB22E45F60001F3226 /* LaunchScreen.storyboard in Resources */,
+				F2C50E0C22E46757001F3226 /* SBCoreDataControlerTestResponse.json in Resources */,
+				F2C50E1422E46A19001F3226 /* UserCell.xib in Resources */,
+				F2C50E0B22E46757001F3226 /* SBCoreDataControllerUpdateResponse.json in Resources */,
 				F2C50DD822E45F60001F3226 /* Assets.xcassets in Resources */,
 				F2C50DD322E45F60001F3226 /* Main.storyboard in Resources */,
 			);
@@ -201,7 +290,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C50DD022E45F60001F3226 /* ViewController.swift in Sources */,
+				F2C50DFE22E462D5001F3226 /* SBCoreDataModelGenerator.swift in Sources */,
+				F2C50DFA22E462D5001F3226 /* SBCoreDataModelable.swift in Sources */,
+				F2C50DFC22E462D5001F3226 /* SBCoreDataDictionaryToDataTransformer.swift in Sources */,
+				F2C50E1322E46A19001F3226 /* UserCell.swift in Sources */,
+				F2C50E1722E46A30001F3226 /* UserCellViewModel.swift in Sources */,
+				F2C50E0522E462E6001F3226 /* UserLink.swift in Sources */,
+				F2C50E0222E462D5001F3226 /* SBCoreDataArrayToDataTransformer.swift in Sources */,
+				F2C50E0822E46666001F3226 /* FileExtension.swift in Sources */,
+				F2C50E0622E462E6001F3226 /* User.swift in Sources */,
+				F2C50DFF22E462D5001F3226 /* SBCoreDataControllerConstants.swift in Sources */,
+				F2C50E0F22E467AB001F3226 /* UserViewModel.swift in Sources */,
 				F2C50DD622E45F60001F3226 /* SBCoreData.xcdatamodeld in Sources */,
+				F2C50E0022E462D5001F3226 /* SBCoreDataManagedObject.swift in Sources */,
+				F2C50E0122E462D5001F3226 /* SBCoreDataAdapter.swift in Sources */,
+				F2C50DFD22E462D5001F3226 /* SBCoreDataManagedObjectStore.swift in Sources */,
+				F2C50DFB22E462D5001F3226 /* SBCoreDataManagable.swift in Sources */,
 				F2C50DCE22E45F60001F3226 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

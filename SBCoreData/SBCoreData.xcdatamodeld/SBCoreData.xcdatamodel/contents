@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F203" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="category">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="link" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="UserLink" inverseName="user" inverseEntity="UserLink" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="userId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="UserLink" representedClassName="UserLink" syncable="YES" codeGenerationType="category">
+        <attribute name="avatarLink" optional="YES" attributeType="Transformable" valueTransformerName="DictionaryToDataTransformer" customClassName="[String: Any]" syncable="YES"/>
+        <attribute name="editLink" optional="YES" attributeType="Transformable" valueTransformerName="DictionaryToDataTransformer" customClassName="[String: Any]" syncable="YES"/>
+        <attribute name="primaryKey" attributeType="String" syncable="YES"/>
+        <attribute name="selfLink" optional="YES" attributeType="Transformable" valueTransformerName="DictionaryToDataTransformer" customClassName="[String: Any]" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="link" inverseEntity="User" syncable="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="primaryKey"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="User" positionX="-36" positionY="72" width="128" height="210"/>
+        <element name="UserLink" positionX="-18" positionY="135" width="128" height="120"/>
+    </elements>
 </model>
