@@ -39,7 +39,6 @@ class UserViewModel: NSObject {
     // MARK: - Constructor
     override init() {
         super.init()
-        
         self.dataSourceObservation = self.observe(\UserViewModel.dataSource, options: .new) { [weak self] (person, change) in
             var vms: [UserCellViewModel] = []
             for user in change.newValue ?? [] {
