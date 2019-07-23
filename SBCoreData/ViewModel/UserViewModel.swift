@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import CoreGraphics
 
 @objc
 class UserViewModel: NSObject {
@@ -107,6 +108,21 @@ class UserViewModel: NSObject {
     func cellViewModel(at indexPath: IndexPath) -> UserCellViewModel {
         let cvm = cellDataSource[indexPath.row]
         return cvm
+    }
+    
+    /// Returns the height of the header
+    /// - Parameters:
+    ///    - section: A Particular section for which header height would be returned
+    func heightForHeaderInSection(_ section: Int) -> CGFloat {
+        return 44.0
+    }
+    
+    /// Returns the header title
+    /// - Parameters:
+    ///    - section: A Particular section for which header title string would be returned
+    func titleOfTheHeader(in section: Int) -> String {
+        let count = self.getResultCount()
+        return "Total Users: \(count)"
     }
     
     /// Returns corresponding url for a particular indexPath

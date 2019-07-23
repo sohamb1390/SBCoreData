@@ -29,6 +29,6 @@ struct UserCellViewModel {
     }()
     
     lazy var address: String = {
-        return user.gender ?? ""
+        return user.address ?? ""
     }()
 }

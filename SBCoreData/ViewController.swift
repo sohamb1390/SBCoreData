@@ -28,6 +28,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(update))
         
+        self.title = "SBCoreData"
+        
         self.setup()
 
         self.viewModel?.loadDataSource()
@@ -38,14 +40,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.viewModel = UserViewModel()
         
         self.viewModel?.onDataSourceLoaded = { [weak self] in
-            if let count = self?.viewModel?.getResultCount(), count > 0 {
-                self?.title = "Total Users: \(count)"
-            }
             self?.tableView.reloadData()
         }
     }
     
     // MARK: - Update
+    /// Fetches updated JSON from the file, updates the DB and the UI as well.
     @objc
     private func update() {
         self.viewModel?.updateDataSource()
@@ -66,6 +66,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.viewModel?.heightForHeaderInSection(section) ?? 0.0
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.viewModel?.titleOfTheHeader(in: section)
     }
     
     // MARK: - Delegate
