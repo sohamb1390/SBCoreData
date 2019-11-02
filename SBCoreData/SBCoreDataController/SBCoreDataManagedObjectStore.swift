@@ -68,17 +68,19 @@ public final  class SBCoreDataManagedObjectStore {
             entities.append(entity)
         } else if let mappedElementValues = anyObject as? [JSON], !mappedElementValues.isEmpty {
             let bgContext = SBCoreDataAdapter.shared().backgroundContext()
-            for mappedElementValue in mappedElementValues {
-                if let updatedEntity: Entity = findAndUpdateEntity(with: entityName, mappedTo: mappedElementValue, context: bgContext) {
-                    entities.append(updatedEntity)
-                    updatedEntity.insertRelatedEntities(mappedTo: mappedElementValue, into: bgContext)
-                } else if let entity: Entity = insertEntity(with: entityName, into: bgContext, mappedTo: mappedElementValue, containedIn: json) {
-                    entities.append(entity)
+            bgContext.performAndWait {
+                for mappedElementValue in mappedElementValues {
+                    if let updatedEntity: Entity = findAndUpdateEntity(with: entityName, mappedTo: mappedElementValue, context: bgContext) {
+                        entities.append(updatedEntity)
+                        updatedEntity.insertRelatedEntities(mappedTo: mappedElementValue, into: bgContext)
+                    } else if let entity: Entity = insertEntity(with: entityName, into: bgContext, mappedTo: mappedElementValue, containedIn: json) {
+                        entities.append(entity)
+                    }
                 }
-            }
-            
-            if !entities.isEmpty {
-                SBCoreDataAdapter.shared().save(context: bgContext)
+                
+                if !entities.isEmpty {
+                    SBCoreDataAdapter.shared().save(context: bgContext)
+                }
             }
         } else {
             DPrint("WARNING: anyObject type is \(anyObject) is not handled for core data entity creation")
