@@ -359,7 +359,7 @@ final class SBCoreDataAdapter {
     ///   - search: `NSPredicate` instance which could be used to filter out the fetched results
     ///   - context: An optional instance of `NSManagedObjectContext` which is needed to perform the delete query
     ///   - shouldSave: A Boolean which identifies whether the context needs to be saved after deleting or not. This is an optional parameter with true value, you can pass with any boolean value as an argument explicitly
-    func deleteRecords<T>(_ type: T.Type,
+    public func deleteRecords<T>(_ type: T.Type,
                           search: NSPredicate? = nil,
                           context: NSManagedObjectContext,
                           shouldSave: Bool = true)  where T: NSManagedObject {
