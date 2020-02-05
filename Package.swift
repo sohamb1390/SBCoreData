@@ -25,6 +25,6 @@ let package = Package(
             path: "SBCoreData"),
         .testTarget(
             name: "SBCoreDataTests",
-            dependencies: ["SBCoreData"]),
+            dependencies: []),
     ]
 )
