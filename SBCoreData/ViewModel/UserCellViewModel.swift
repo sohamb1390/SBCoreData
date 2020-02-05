@@ -17,18 +17,18 @@ struct UserCellViewModel {
     
     // MARK: - Helpers
     lazy var userName: String = {
-        return "\(user.firstName ?? "") \(user.lastName ?? "")"
+        return "\(user.value(forKey: "firstName") as? String ?? "") \(user.value(forKey: "lastName") as? String ?? "")"
     }()
     
     lazy var dob: String = {
-        return user.dateOfBirth ?? ""
+        return user.value(forKey: "dateOfBirth") as? String ?? ""
     }()
     
     lazy var gender: String = {
-        return user.gender ?? ""
+        return user.value(forKey: "gender") as? String ?? ""
     }()
     
     lazy var address: String = {
-        return user.address ?? ""
+        return user.value(forKey: "address") as? String ?? ""
     }()
 }

@@ -53,8 +53,8 @@ public class User: SBCoreDataManagedObject {
     ///    - context: An `NSManagedObjectContext` instance which is needed for DB insert query
     private func appendUserLinks(from json: JSON, using context: NSManagedObjectContext) {
         if let linkDict = json["_links"] as? [String: Any], let linkMO = SBCoreDataManagedObjectStore.shared().insertEntity(with: String(describing: UserLink.self), into: context, mappedTo: linkDict, containedIn: json) as? UserLink  {
-            linkMO.primaryKey = self.userId
-            self.link = linkMO
+            linkMO.setValue(self.value(forKey: "userId"), forKey: "primaryKey")
+            self.setValue(linkMO, forKey: "link")
         }
     }
 }

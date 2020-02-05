@@ -23,7 +23,7 @@ class UserViewModel: NSObject {
     
     fileprivate lazy var fetchedResultsController: NSFetchedResultsController<User> = {
         // Create Fetch Request
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest() as! NSFetchRequest<User>
         
         // Configure Fetch Request
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: User.defaultSortKey, ascending: User.useAscendingSort)]
@@ -130,7 +130,10 @@ class UserViewModel: NSObject {
     ///    - indexPath: A particular indexPath for which a user link would get returned
     func getURL(for indexPath: IndexPath) -> URL? {
         let user = dataSource[indexPath.row]
-        if let selfLink = user.link?.selfLink?["href"] as? String, let url = URL(string: selfLink) {
+        
+        if let userLink = user.value(forKey: "link") as? UserLink,
+            let selfLink = userLink.value(forKey: "selfLink") as? [String: Any],
+            let href = selfLink["href"] as? String, let url = URL(string: href) {
             return url
         }
         return nil
