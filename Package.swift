@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "SBCoreData",
             dependencies: [],
-            path: "SBCoreData"),
+            path: "Sources"),
         .testTarget(
             name: "SBCoreDataTests",
             dependencies: []),
