@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-final class SBCoreDataModelGenerator {
+public final class SBCoreDataModelGenerator {
     /// Initialses CoreData stack (a.k.a `SBCoreDataAdapter`) and loads the persistent container into the memory in order to use the DB.
     /// - Parameters:
     ///    - modelFileName: A String containing the core data model file name

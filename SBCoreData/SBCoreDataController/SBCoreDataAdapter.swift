@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-final class SBCoreDataAdapter {
+public final class SBCoreDataAdapter {
     // MARK: Variables
     
     /// Instance of PersistantContainer
