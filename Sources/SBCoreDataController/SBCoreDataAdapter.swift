@@ -232,21 +232,27 @@ public final class SBCoreDataAdapter {
         
         // Execute fetch query
         var results: [Any] = []
-        do {
-            if let context = context {
-                context.performAndWait {
-                    results = try context.fetch(request)
-                }
-            } else {
-                viewContext.performAndWait { [weak self] in
-                    results = try self?.viewContext.fetch(request) ?? []
+        if let context = context {
+            context.performAndWait {
+                do {
+                    results = try context.fetch(request) 
+                } catch {
+                    DPrint("Error with request: \(error)")
+                    results = []
                 }
             }
-            return results as? [T] ?? []
-        } catch {
-            DPrint("Error with request: \(error)")
-            return []
+        } else {
+            viewContext.performAndWait { [weak self] in
+                do {
+                    results = try self?.viewContext.fetch(request) ?? []
+                } catch {
+                    DPrint("Error with request: \(error)")
+                    results = []
+                }
+            }
         }
+        
+        return results as? [T] ?? []
     }
     
     /// A Public method which fetches database objects asynchronously using filters/sort attributes.
