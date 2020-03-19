@@ -234,9 +234,13 @@ public final class SBCoreDataAdapter {
         var results: [Any] = []
         do {
             if let context = context {
-                results = try context.fetch(request)
+                context.performAndWait {
+                    results = try context.fetch(request)
+                }
             } else {
-                results = try self.viewContext.fetch(request)
+                viewContext.performAndWait { [weak self] in
+                    results = try self?.viewContext.fetch(request) ?? []
+                }
             }
             return results as? [T] ?? []
         } catch {
