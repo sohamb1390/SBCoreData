@@ -132,11 +132,13 @@ public final  class SBCoreDataManagedObjectStore {
             let sortDesc = NSSortDescriptor(key: entityClass.defaultSortKey, ascending: true)
             // let fetchRequest = NSFetchRequest<SBCoreDataManagedObject>(entityName: NSStringFromClass(entityClass))
             let fetchRequest = entityClass.fetchRequest()
-            let entities = SBCoreDataAdapter.shared().query(entityClass, search: pKeyFilter, sort: [sortDesc], context: context, request: fetchRequest)
-            
-            if !entities.isEmpty, let entity = entities.first as? Entity {
-                updatedEntity = entity
-                updatedEntity?.setValuesForKeys(element, from: entityClass.elementToPropertyMapping)
+            context.performAndWait {
+                let entities = SBCoreDataAdapter.shared().query(entityClass, search: pKeyFilter, sort: [sortDesc], context: context, request: fetchRequest)
+                
+                if !entities.isEmpty, let entity = entities.first as? Entity {
+                    updatedEntity = entity
+                    updatedEntity?.setValuesForKeys(element, from: entityClass.elementToPropertyMapping)
+                }
             }
         }
         
